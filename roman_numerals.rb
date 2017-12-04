@@ -13,6 +13,3 @@ class Integer
   end
 end
 
-# class Integer
-#   include RomanNumerals
-# end
