@@ -1,15 +1,20 @@
 class Integer
     NUMERALS = {
-      "M" => 1,
-      "CM" => 5,
-      "X" => 10,
-
+      1 => "I",
+      5 => "V",
+      10 => "X"
     }
 
   def to_roman
     number = self
     result = ""
-    result << NUMERALS[number]
+    NUMERALS.each_pair do |int, numeral|
+    while number >= int
+      result << numeral
+      number -= int
+      end
+    end
+    result
   end
 end
 
